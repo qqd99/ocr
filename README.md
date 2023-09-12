@@ -9,4 +9,5 @@ Now, to install require library, open cmd by press Windows+R
 
 To use, edit this line (Press Ctrl+F and paste the line if you can't find it):
   image_path = "Untitled.png"
-  Change Untitled.png into your image's path
+
+Change Untitled.png into your image's path
