@@ -11,6 +11,8 @@ image_path = "Untitled.png"
 # Read the image directly as RGB
 img = cv2.imread(image_path)
 
+
+# Use to detect  words 
 # Use pytesseract to get text boxes
 boxes = pytesseract.image_to_data(img).splitlines()
 
@@ -21,6 +23,9 @@ for i, box in enumerate(boxes[1:]):  # Start from index 1 to skip header
         x, y, w, h = map(int, b[6:10])
         print(b[11])  # b[11] is text
         cv2.rectangle(img, (x, y), (w + x, h + y), (0, 0, 255), 1)
+
+# Use to get line
+print(pytesseract.image_to_string(img))
 
 # Display the image
 cv2.imshow('Result', img)
